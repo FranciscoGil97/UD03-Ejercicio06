@@ -10,17 +10,17 @@
     Height="450"
     Width="800"
     Icon="/tiempo.ico">
-    <StackPanel Background="LightGreen">
+    <DockPanel
+        Background="LightGreen">
         <TextBlock
+            DockPanel.Dock="Top"
             x:Name="textoTextBlock"
             TextAlignment="Center"
             Text="Las 4 estaciones"
             TextWrapping="NoWrap"
-            VerticalAlignment="Top"
             FontSize="40"
             Foreground="#FF2365B4"
             FontWeight="Bold">
-            
             <TextBlock.Effect>
                 <DropShadowEffect
                     ShadowDepth="3"
@@ -30,39 +30,42 @@
                     BlurRadius="1" />
             </TextBlock.Effect>
         </TextBlock>
-        <UniformGrid Rows="2" Columns="2" Height="360" >
-        
-        <ScrollViewer
-            VerticalScrollBarVisibility="Auto"
-            HorizontalScrollBarVisibility="Auto"
-            Margin="7">
+        <UniformGrid
+            Rows="2"
+            Columns="2">
+
+            <ScrollViewer
+                VerticalScrollBarVisibility="Auto"
+                HorizontalScrollBarVisibility="Auto"
+                Margin="7">
                 <Image
-                    Source="/invierno.jpg" Stretch="None" />
+                    Source="/invierno.jpg"
+                    Stretch="None" />
             </ScrollViewer>
-        <ScrollViewer
-            VerticalScrollBarVisibility="Auto"
-            HorizontalScrollBarVisibility="Auto"
+            <ScrollViewer
+                VerticalScrollBarVisibility="Auto"
+                HorizontalScrollBarVisibility="Auto"
                 Margin="7">
                 <Image
                     Source="/primavera.jpg"
                     Stretch="None" />
             </ScrollViewer>
-        <ScrollViewer
-            VerticalScrollBarVisibility="Auto"
-            HorizontalScrollBarVisibility="Auto"
+            <ScrollViewer
+                VerticalScrollBarVisibility="Auto"
+                HorizontalScrollBarVisibility="Auto"
                 Margin="7">
                 <Image
                     Source="/verano.jpg"
                     Stretch="None" />
             </ScrollViewer>
-        <ScrollViewer
-            VerticalScrollBarVisibility="Auto"
-            HorizontalScrollBarVisibility="Auto"
+            <ScrollViewer
+                VerticalScrollBarVisibility="Auto"
+                HorizontalScrollBarVisibility="Auto"
                 Margin="7">
                 <Image
                     Source="/otoño.jpg"
                     Stretch="None" />
             </ScrollViewer>
-    </UniformGrid>
-    </StackPanel>
+        </UniformGrid>
+    </DockPanel>
 </Window>
